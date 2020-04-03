@@ -5,5 +5,8 @@ Disassemble `phase_2` and identify that it requires 6 numbers as its parameters.
 So, create a breack point in `phase_2` by using `b` and run the program using `r`. <br>
 Provide the previous level's passphrase and hit enter. As for the next one we know that it required 6 numbers so, for this moment just enter ` 1 2 3 4 5 6` and hit enter, the breakpoint will be created.<br>
 ![](https://user-images.githubusercontent.com/37071700/78336761-8aff4a80-75ad-11ea-9e5d-6289e46534f9.png)<br><br>
+Disassemble the function using `disas`. You can see that the first comparison is compared with number `1` in the assembly code it represent as bellow,<br><br>
+`cmp DWORD PTR [ebp-0x18],`**0x1**
+
 
 
