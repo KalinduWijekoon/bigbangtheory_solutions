@@ -14,6 +14,27 @@ Using `ni` command (next instruction) or `until` command, go somewhere below to 
 luckily, we entered `1 2 3 4 5 6` as our parameter so that the first two digits are OK.<br>
 Moving on with the function, you can again run `ni` through the function to identify its behaviour.<br>
 You will identify that the instruction pointer will move again to the instruction where **`lea    esi, [ebx+0x1]`**<br>
-![](https://user-images.githubusercontent.com/37071700/78342055-517f0d00-75b6-11ea-8573-1f142f7ec60d.PNG)<br>
+![](https://user-images.githubusercontent.com/37071700/78342055-517f0d00-75b6-11ea-8573-1f142f7ec60d.PNG)<br><br>
+Again, move to the comparison function **`cmp    DWORD PTR [esi+ebx*4], eax`** using `ni` and view the register information to get an idea about the next integer that `eax` holds.<br>
+![](https://user-images.githubusercontent.com/37071700/78342873-9bb4be00-75b7-11ea-83f3-4f0488a193d7.png)<br>
+So, now `eax` holds **" 6 "**<br><br>
+So far we identified that our first three integers are **1** **2** and **6**. As you can see, there is a pattern here and you don't need to go again through the fucntion to get the next numbers. (If you want, you can).<br>
+After analyzing the number pattern we can represent the pattern using the below formula,<br><br>
+**V[ i ] = V[ i-1 ] * i + 1** <br><br>
+Where V[ i ] is the array value of the "i" th index<br>
+Example : As now we know our first three parameters are **1 2 6**, so to find the fourth,<br>
+
+    V[ 3 ] = V [ 3-1 ] * 4 + 1  ;  V [ 3-1 ] is the array value of the 2nd index which is 6 (Arrays are starting from **0**) 
+      msg db '/bin/sh'
+      
+    section .text
+      global _start
+      
+    _start:
+      mov eax, 11
+      mov ebx, msg
+      mov ecx, 0
+          
+          
 
 
