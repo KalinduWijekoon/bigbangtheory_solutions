@@ -18,34 +18,34 @@ You will identify that the instruction pointer will move again to the instructio
 Again, move to the comparison function **`cmp    DWORD PTR [esi+ebx*4], eax`** using `ni` and view the register information to get an idea about the next integer that `eax` holds.<br>
 ![](https://user-images.githubusercontent.com/37071700/78342873-9bb4be00-75b7-11ea-83f3-4f0488a193d7.png)<br>
 So, now `eax` holds **" 6 "**<br><br>
-So far we identified that our first three integers are **1 , ** **2** and **6**. As you can see, there is a pattern here and you don't need to go again and again through the fucntion to get the next numbers. (If you want, you can).<br>
+So far we identified that our first three integers are **1** **,** **2** and **6**. As you can see, there is a pattern here and you don't need to go again and again through the fucntion to get the next numbers. (If you want, you can).<br>
 After analyzing the number pattern we can represent the pattern using the below formula,<br><br>
 **V[ i ] = V[ i-1 ] * i + 1** <br><br>
 Where V[ i ] is the array value of the "i" th index<br>
-As now we know our first three parameters are `1 , 2 and 6`, **(0th == 1 , 1st == 2 , 2nd == 6)**  so to find the fourth number which is the 3rd index,<br>
+As now we know our first three parameters are `1 , 2, and 6`, **(0th == 1 , 1st == 2 , 2nd == 6)**  so to find the fourth number which is the 3rd index,<br>
 
     V[ 3 ] = V [ 3-1 ] * 3 + 1  ; V [ 3-1 ] is the array value of the 2nd index which is 6 (Arrays are starting from 0)
     V[ 3 ] = V [ 2 ] * 4
     V[ 3 ] = 6 * 4
     V[ 3 ] = 24 
 
-So we got our fourth number which is 24<br><br>
-Now we have our first four parameters which are `1 2 6 and 24`, **(0th == 1 , 1st == 2 , 2nd == 6 , 3rd == 24)**  so to find the fifth number which is the 4th index,<br>
+So we got our fourth number which is `24`<br><br>
+Now we have our first four parameters which are `1, 2, 6, and 24`, **(0th == 1 , 1st == 2 , 2nd == 6 , 3rd == 24)**  so to find the fifth number which is the 4th index,<br>
 
     V[ 4 ] = V [ 4-1 ] * 4 + 1  ; V [ 4-1 ] is the array value of the 3rd index which is 24 (Arrays are starting from 0)
-    V[ 4 ] = V [ 4 ] * 5
+    V[ 4 ] = V [ 3 ] * 5
     V[ 4 ] = 24 * 5
     V[ 4 ] = 120
     
-So we got our fifth number which is 120<br><br>
-Now we have our first five parameters which are `1 2 6 24 and 120`, **(0th == 1 , 1st == 2 , 2nd == 6 , 3rd == 24 , 4th == 120)**  so to find the final number which is the 5th index,<br>
+So we got our fifth number which is `120`<br><br>
+Now we have our first five parameters which are `1, 2, 6, 24, and 120`, **(0th == 1 , 1st == 2 , 2nd == 6 , 3rd == 24 , 4th == 120)**  so to find the final number which is the 5th index,<br>
 
     V[ 5 ] = V [ 5-1 ] * 5 + 1  ; V [ 5-1 ] is the array value of the 4th index which is 120 (Arrays are starting from 0)
     V[ 5 ] = V [ 4 ] * 6
     V[ 5 ] = 120 * 6
     V[ 5 ] = 720 
     
-So we got our sixth number which is 720<br><br>
+So we got our sixth number which is `720`<br><br>
 Now we have all our six parameters which are **`1 2 6 24 120 720`**<br>
 
 
