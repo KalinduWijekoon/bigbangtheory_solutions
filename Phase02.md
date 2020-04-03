@@ -22,19 +22,43 @@ So far we identified that our first three integers are **1** **2** and **6**. As
 After analyzing the number pattern we can represent the pattern using the below formula,<br><br>
 **V[ i ] = V[ i-1 ] * i + 1** <br><br>
 Where V[ i ] is the array value of the "i" th index<br>
-Example : As now we know our first three parameters are **1 2 6**, so to find the fourth,<br>
+As now we know our first three parameters are `1 2 and 6`, **(0th == 1 , 1st == 2 , 2nd == 6)**  so to find the fourth number which is the 3rd index,<br>
 
-    V[ 3 ] = V [ 3-1 ] * 4 + 1  ;  V [ 3-1 ] is the array value of the 2nd index which is 6 (Arrays are starting from **0**) 
-      msg db '/bin/sh'
-      
-    section .text
-      global _start
-      
-    _start:
-      mov eax, 11
-      mov ebx, msg
-      mov ecx, 0
-          
-          
+    V[ 3 ] = V [ 3-1 ] * 3 + 1  ; V [ 3-1 ] is the array value of the 2nd index which is 6 (Arrays are starting from **0**)
+    V[ 3 ] = V [ 2 ] * 4
+    V[ 3 ] = 6 * 4
+    V[ 3 ] = 24 
+
+So we got our fourth number which is 24<br><br>
+Now we have our first four parameters which are `1 2 6 and 24`, **(0th == 1 , 1st == 2 , 2nd == 6 , 3rd == 24)**  so to find the fifth number which is the 4th index,<br>
+
+    V[ 4 ] = V [ 4-1 ] * 4 + 1  ; V [ 4-1 ] is the array value of the 3rd index which is 24 (Arrays are starting from **0**)
+    V[ 4 ] = V [ 4 ] * 5
+    V[ 4 ] = 24 * 5
+    V[ 4 ] = 120
+    
+So we got our fifth number which is 120<br><br>
+Now we have our first five parameters which are `1 2 6 24 and 120`, **(0th == 1 , 1st == 2 , 2nd == 6 , 3rd == 24 , 4th == 120)**  so to find the final number which is the 5th index,<br>
+
+    V[ 5 ] = V [ 5-1 ] * 5 + 1  ; V [ 5-1 ] is the array value of the 4th index which is 120 (Arrays are starting from **0**)
+    V[ 5 ] = V [ 4 ] * 6
+    V[ 5 ] = 120 * 6
+    V[ 5 ] = 720 
+    
+So we got our sixth number which is 720<br><br>
+Now we have all our six parameters which are **`1 2 6 24 120 720`**<br>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
