@@ -46,7 +46,9 @@ Now we have our first five parameters which are `1, 2, 6, 24, and 120`, **(0th =
     V[ 5 ] = 720 
     
 So we got our sixth number which is `720`<br><br>
-Now we have all our six parameters which are **`1 2 6 24 120 720`**<br>
+Now we have all our six parameters which are **`1 2 6 24 120 720`**<br><br>
+Run the program again and use the previous level's passphrase (you can use a text file contains all previous level passphrases as well) and as for the second passphrase, type **1 2 6 24 120 720** and hit enter.<br> 
+![](https://user-images.githubusercontent.com/37071700/78348443-a410f700-75bf-11ea-8091-56c6e8d06f27.png)
 
 
 
